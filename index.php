@@ -3,10 +3,28 @@ $animals = array(
 'Eurasia' => array('Canis lupus', 'Castor fiber', ' Alces alces', 'Sus scrofa ', 'Folivora', 'Panthera'),
 'Africa' => array('Diceros bicornis', 'Panthera leo', 'Eudorcas thomsonii', 'Equus grevyi', 'Gorilla'));
 
-foreach ($animals as $region) {
+$beastr = array();
+
+foreach ($animals as $reg)
+{
+  foreach ($reg as $beast)
+  {
+    if (strlen($beast) > 8)
+    {
+      print_r($beast) . "<br>";
+      $beastr[] = $beast;
+    }
+  }
+}
+
+print_r($beastr);
+/*  foreach ($animals as $region) {
   $beast = array();
-  foreach ($region as $animal ) {
-    if (strlen($animal) > 8) {
+  foreach ($region as $animal )
+  {
+    if (strlen($animal) > 8)
+    {
+      $bread = array($animal);
     //  $arraybeast = array_fill(0, 1, $animal);
     //  foreach ($arraybeast as $anim) {
     //    $arraybeastes = array_merge($arraybeast, $anim);
@@ -15,12 +33,12 @@ foreach ($animals as $region) {
     //  }
     $bear = explode(',' ,$animal);
     $beast = array_merge($beast, $bear);
-    var_dump($beast) ;
-    echo $beast;
-    echo "1 <br>";
-    }
   }
-}
+    var_dump($bread) ;
+    //echo $bread;
+    echo "1 <br>";
+  }
+} */
 
 //$beasts = ['Canis lupus', 'Castor fiber', 'Alces alces', 'Sus scrofa', 'Diceros bicornis', 'Panthera leo', 'Eudorcas thomsonii', 'Equus grevyi'];
 
