@@ -16,12 +16,32 @@ foreach ($animals as $reg)
   }
 }
 
-shuffle($beastr);
 foreach ($beastr as $fant_animal)
 {
-  //echo $fant_animal . "<br>";
   $expanim = explode(" ", $fant_animal);
-  print_r ($expanim);
+  $expan[] = $expanim[0];
+  $expan2[] = $expanim[1];
 }
+shuffle($expan);
+shuffle($expan2);
+
+foreach ($expan as $anim)
+{
+  $bea = $anim;
+  foreach ($expan2 as $anim2)
+  {
+    $bea2 = $anim2;
+    $sumbea = $bea . $bea2;
+    $fantabea[] = $sumbea;
+  }
+}
+
+foreach ($fantabea as $beast)
+{
+
+  echo $beast . "<br>";
+}
+
+
 
  ?>
