@@ -1,6 +1,6 @@
 <?php
 $animals = array(
-'Eurasia' => array('Canis lupus', 'Castor fiber', ' Alces alces', 'Sus scrofa ', 'Folivora', 'Panthera'),
+'Eurasia' => array('Canis lupus', 'Castor fiber', 'Alces alces', 'Sus scrofa ', 'Folivora', 'Panthera'),
 'Africa' => array('Diceros bicornis', 'Panthera leo', 'Eudorcas thomsonii', 'Equus grevyi', 'Gorilla'));
 $beastr = array();
 foreach ($animals as $reg)
