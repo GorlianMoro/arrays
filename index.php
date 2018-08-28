@@ -2,26 +2,21 @@
 $animals = array(
 'Eurasia' => array('Canis lupus', 'Castor fiber', 'Alces alces', 'Sus scrofa ', 'Folivora', 'Panthera'),
 'Africa' => array('Diceros bicornis', 'Panthera leo', 'Eudorcas thomsonii', 'Equus grevyi', 'Gorilla'));
-$beastr = array();
+
 foreach ($animals as $reg)
 {
-  foreach ($reg as $beast)
+  foreach ($reg as $anim)
   {
-    if (strlen($beast) > 8)
+    $expanim = explode(" ", $anim);
+    if (!empty($expanim[1]))
     {
-      $beastr[] = $beast;
+      $expan[] = $expanim[0];
+      $expan2[] = $expanim[1];
     }
   }
 }
-$expan = array();
-$expan2 = array();
-foreach ($beastr as $fant_animal)
-{
-  $expanim = explode(" ", $fant_animal);
-  $expan[] = $expanim[0];
-  $expan2[] = $expanim[1];
-}
 
+shuffle($expan);
 shuffle($expan2);
 foreach ($expan as $anim)
 {
