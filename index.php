@@ -8,7 +8,9 @@ foreach ($animals as $reg)
   foreach ($reg as $anim)
   {
     $expanim = explode(" ", $anim);
-    if (!empty($expanim[1]))
+    $i = 1;
+    $i++;
+    if (!empty($expanim[$i >= 1]))
     {
       $expan[] = $expanim[0];
       $expan2[] = $expanim[1];
@@ -28,6 +30,6 @@ foreach ($expan as $anim)
 }
 foreach ($fantabea as $beast)
 {
-  echo $beast . "<br>";
 }
+echo $beast . "<br>";
  ?>
