@@ -17,17 +17,17 @@ foreach ($animals as $reg)
 }
 
 shuffle($expan);
-shuffle($expan2);
 foreach ($expan as $anim)
 {
+  shuffle($expan2);
   foreach ($expan2 as $anim2)
   {
-    $sumbea = $anim . " " . $anim2;
+    $sumbea = $anim . " " . $anim2 . " ";
     $fantabea[] = $sumbea;
   }
-}
-foreach ($fantabea as $beast)
-{
-  echo $beast . "<br>";
+  foreach ($fantabea as $beast)
+  {
+  }
+  echo $beast;
 }
  ?>
