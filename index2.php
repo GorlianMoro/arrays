@@ -18,8 +18,6 @@ foreach ($animals as $reg)
   }
 }
 
-shuffle($expan);
-shuffle($expan2);
 $fantabea = array();
 foreach ($expan as $anim)
 {
@@ -28,8 +26,8 @@ foreach ($expan as $anim)
     $sumbea = $anim . " " . $anim2;
     $fantabea[] = $sumbea;
   }
-
 }
-$beast = implode(" ", $fantabea);
+shuffle($fantabea);
+$beast = implode("<br>", $fantabea);
 echo $beast;
  ?>
