@@ -3,6 +3,8 @@ $animals = array(
 'Eurasia' => array('Canis lupus', 'Castor fiber', 'Alces alces', 'Sus scrofa ', 'Folivora', 'Panthera'),
 'Africa' => array('Diceros bicornis', 'Panthera leo', 'Eudorcas thomsonii', 'Equus grevyi', 'Gorilla'));
 
+$expan = array();
+$expan2 = array();
 foreach ($animals as $reg)
 {
   foreach ($reg as $anim)
@@ -17,17 +19,17 @@ foreach ($animals as $reg)
 }
 
 shuffle($expan);
+shuffle($expan2);
+$fantabea = array();
 foreach ($expan as $anim)
 {
-  shuffle($expan2);
   foreach ($expan2 as $anim2)
   {
-    $sumbea = $anim . " " . $anim2 . " ";
+    $sumbea = $anim . " " . $anim2;
     $fantabea[] = $sumbea;
   }
-  foreach ($fantabea as $beast)
-  {
-  }
-  echo $beast;
+
 }
+$beast = implode(" ", $fantabea);
+echo $beast;
  ?>
